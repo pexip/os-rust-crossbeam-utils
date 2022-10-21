@@ -1,0 +1,13 @@
+Index: crossbeam-utils/Cargo.toml
+===================================================================
+--- crossbeam-utils.orig/Cargo.toml
++++ crossbeam-utils/Cargo.toml
+@@ -36,7 +36,7 @@ repository = "https://github.com/crossbe
+ version = "1"
+ 
+ [dev-dependencies.rand]
+-version = "0.8"
++version = ">= 0.7, < 0.9"
+ 
+ [dev-dependencies.rustversion]
+ version = "1"

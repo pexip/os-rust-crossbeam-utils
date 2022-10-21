@@ -1,0 +1,24 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test crossbeam-utils 0.8.12 --all-targets --all-features
+Features: test-name=rust-crossbeam-utils:@
+Depends: dh-cargo (>= 18), librust-rand-0.8+default-dev | librust-rand-0.7+default-dev, librust-rustversion-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable, flaky
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test crossbeam-utils 0.8.12 --all-targets 
+Features: test-name=librust-crossbeam-utils-dev:default
+Depends: dh-cargo (>= 18), librust-rand-0.8+default-dev | librust-rand-0.7+default-dev, librust-rustversion-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable, flaky
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test crossbeam-utils 0.8.12 --all-targets --no-default-features --features nightly
+Features: test-name=librust-crossbeam-utils-dev:nightly
+Depends: dh-cargo (>= 18), librust-rand-0.8+default-dev | librust-rand-0.7+default-dev, librust-rustversion-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable, flaky
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test crossbeam-utils 0.8.12 --all-targets --no-default-features --features std
+Features: test-name=librust-crossbeam-utils-dev:std
+Depends: dh-cargo (>= 18), librust-rand-0.8+default-dev | librust-rand-0.7+default-dev, librust-rustversion-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable, flaky
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test crossbeam-utils 0.8.12 --all-targets --no-default-features
+Features: test-name=librust-crossbeam-utils-dev:
+Depends: dh-cargo (>= 18), librust-rand-0.8+default-dev | librust-rand-0.7+default-dev, librust-rustversion-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable, flaky
